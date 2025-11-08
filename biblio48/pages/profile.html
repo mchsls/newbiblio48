@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - Липецкая областная детская библиотека</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Верхняя шапка -->
+    <div class="top-header">
+        <div class="container">
+            <div class="address">г. Липецк, ул. Л. Толстого, 40</div>
+            <div class="top-right">
+                <a href="../index.html" class="login-btn">
+                    <i class="fas fa-home"></i>На главную
+                </a>
+                <button class="logout-btn" id="profileLogoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>Выйти
+                </button>
+                <div class="social-icons">
+                    <a href="https://vk.com/childbook_lipetsk"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основная шапка -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-main-row">
+                <div class="logo-section">
+                    <a href="../index.html" class="logo">
+                        <img src="../images/logo.png" alt="Логотип библиотеки">
+                        <div class="logo-text">
+                            <div class="logo-line1">Липецкая областная</div>
+                            <div class="logo-line2">детская библиотека</div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="profile-welcome">
+                    <h1>Личный кабинет</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Личный кабинет -->
+    <main class="profile-main">
+        <div class="container">
+            <div class="profile-content">
+                <!-- Информация о пользователе -->
+                <div class="profile-section">
+                    <h2><i class="fas fa-user-circle"></i> Мой профиль</h2>
+                    <div class="profile-card">
+                        <div class="profile-info" id="profileInfo">
+                            <!-- Данные загружаются через JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-columns">
+                    <!-- Забронированные книги -->
+                    <div class="profile-section">
+                        <h2><i class="fas fa-book"></i> Мои бронирования</h2>
+                        <div class="profile-card">
+                            <div class="bookings-list" id="bookingsList">
+                                <p class="loading-text">Загрузка бронирований...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Зарегистрированные мероприятия -->
+                    <div class="profile-section">
+                        <h2><i class="fas fa-calendar-alt"></i> Мои мероприятия</h2>
+                        <div class="profile-card">
+                            <div class="events-list" id="eventsList">
+                                <p class="loading-text">Загрузка мероприятий...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p>г. Липецк, ул. Л. Толстого, 40</p>
+                    <p>Телефон: +7 (4742) 123-456</p>
+                    <p>Email: info@lib48.ru</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/profile.js"></script>
+</body>
+</html>
