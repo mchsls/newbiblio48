@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - Библиотека</title>
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .profile-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .profile-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .profile-tabs {
+            display: flex;
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .profile-tab {
+            padding: 15px 25px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .profile-tab.active {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .profile-tab-content {
+            display: none;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .profile-tab-content.active {
+            display: block;
+        }
+        
+        .profile-field {
+            margin-bottom: 15px;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .profile-field strong {
+            display: inline-block;
+            width: 200px;
+            color: #555;
+        }
+        
+        .info-message {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+        
+        .info-message h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .status-active {
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        .status-blocked {
+            color: #dc3545;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <h1><i class="fas fa-user-circle"></i> Личный кабинет</h1>
+            <p>Управление вашей учетной записью и активностью</p>
+        </div>
+
+        <div class="profile-tabs">
+            <button class="profile-tab active" data-tab="info">📋 Основная информация</button>
+            <button class="profile-tab" data-tab="books">📚 Мои бронирования</button>
+            <button class="profile-tab" data-tab="events">🎭 Мои мероприятия</button>
+        </div>
+
+        <!-- Основная информация -->
+        <div id="info-tab" class="profile-tab-content active">
+            <h2>Основная информация</h2>
+            <div id="profileInfo">
+                <!-- Информация будет загружена через JavaScript -->
+            </div>
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
+                <button id="profileLogoutBtn" class="btn btn-danger">
+                    <i class="fas fa-sign-out-alt"></i> Выйти из системы
+                </button>
+            </div>
+        </div>
+
+        <!-- Мои бронирования -->
+        <div id="books-tab" class="profile-tab-content">
+            <h2>Мои бронирования книг</h2>
+            <div id="reservationsList">
+                <!-- Бронирования будут загружены через JavaScript -->
+            </div>
+        </div>
+
+        <!-- Мои мероприятия -->
+        <div id="events-tab" class="profile-tab-content">
+            <h2>Мои мероприятия</h2>
+            <div id="eventsList">
+                <!-- Мероприятия будут загружены через JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/profile.js"></script>
+</body>
+</html>
